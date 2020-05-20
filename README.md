@@ -39,11 +39,11 @@ In addition, we know soil moisture is a master variable that drives plant produc
  
  ### Data Sources:
 
-Data from the USDA ARS CARM PROJECT (http://www.ars.usda.gov/Research/docs.htm?docid=25733) are available by contacting the CPER; please contact <a href="mailto:Nicole.Kaplan@usda.gov">Nicole.Kaplan@usda.gov</a>
+Data for this repository is generated from the USDA ARS CARM PROJECT (http://www.ars.usda.gov/Research/docs.htm?docid=25733) and are available from the CPER; please contact <a href="mailto:Nicole.Kaplan@usda.gov">Nicole.Kaplan@usda.gov</a>
  
  ### Run workflow:
  
-1. Clone this repository (https://github.com/nickaplan/precip-interpolator.git)
+1. Clone this repository: https://github.com/nickaplan/precip-interpolator.git
 
 2. Create working directory for input data and output files for plots and maps of interpolated precipitation data and soil moisture graphics
 
