@@ -2,12 +2,13 @@
 
 #### Data workflow for interpolation of precipitation data from a network of rain gauges on the Central Plains Experimental Range (referred to as hydromet network by our local scientists)
 
-This repository is for development of code to interpolate and map precipitation across the Central Plains Experimental Range (CPER), a 15,500 acre Agricultural Research Service, USDA site in Nunn, CO. In the spring and summer monthes rangelands in the central plains receive precipitation at variable rates; rainfall differs in location, timing and intensity across relative small areas.  This is the time of year moisture is received through isolated convective storms, and is also when cattle are grazed on the landscape for beef production.  Many experimental rangeland sites, such as the CPER, are being instrumented with networks of environmental sensors.   These sensor can tell us precisely when, where and how much rain fell.  But getting the data to scientists and stakeholders in a timely manner to be used to enable precision rangeland management decisions is a challenge.  Maps and plots of data must be presented throughout the season in easy-to-use visualizations, when decisions are being made.
+This repository is for development of code to interpolate and map precipitation across the Central Plains Experimental Range (CPER), a 15,500 acre Agricultural Research Service, USDA site in Nunn, CO. In the spring and summer monthes rangelands in the central plains receive precipitation at variable rates; rainfall differs in location, timing and intensity across relative small areas.  This is the time of year moisture is received through isolated convective storms, and is also when cattle are grazed on the landscape for beef production.  Many experimental rangeland sites, such as the CPER, are being instrumented with networks of environmental sensors.   These sensors can tell us precisely when, where and how much rain fell.  But getting the data to scientists and stakeholders in a timely manner to be used to enable precision rangeland management decisions is a challenge.  Maps and plots of data must be presented throughout the season in easy-to-use visualizations, when decisions are being made.
 
 ***
-**Local nature of rainfall on the grasslands, by Sean Hauser**
-<img src="https://mountainscholar.org/bitstream/handle/10217/84527/NRELSGSL_Storm_CSH.jpg?sequence=1&isAllowed=y" alt="Rainstorm" title="Rainstorm" width="120" height="100" />
+<img src="https://mountainscholar.org/bitstream/handle/10217/84527/NRELSGSL_Storm_CSH.jpg?sequence=1&isAllowed=y" alt="Rainstorm" title="Rainstorm" width="300" height="150" /> 
 
+***Localized nature of rainfall on semi-arid rangelands, by Sean Hauser***
+***
 
 Interpolation of the CPER hydromet network precipitation data with various statistical methods will result in a script that our scientists will be able to use as a programming module to help answer reseach questions in other locations, in addition to making more precise rangeland management decision on the CPER.  
 
@@ -38,11 +39,11 @@ In addition, we know soil moisture is a master variable that drives plant produc
  
  ### Data Sources:
 
- Data from the [USDA ARS CARM PROJECT] (http://www.ars.usda.gov/Research/docs.htm?docid=25733) are available by contacting the CPER; please contact <a href="mailto:Nicole.Kaplan@usda.gov">Nicole.Kaplan@usda.gov</a>
+Data for this repository is generated from the USDA ARS CARM PROJECT (http://www.ars.usda.gov/Research/docs.htm?docid=25733) and are available from the CPER; please contact <a href="mailto:Nicole.Kaplan@usda.gov">Nicole.Kaplan@usda.gov</a>
  
  ### Run workflow:
  
-1. [Clone this repository] (https://github.com/nickaplan/precip-interpolator.git)
+1. Clone this repository: https://github.com/nickaplan/precip-interpolator.git
 
 2. Create working directory for input data and output files for plots and maps of interpolated precipitation data and soil moisture graphics
 
