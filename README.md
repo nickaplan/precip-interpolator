@@ -39,10 +39,10 @@ Data for this repository is generated from the USDA ARS CARM PROJECT (http://www
 
 Data required to run the example notebook includes:
 
-1. A shape file of the CPER Boundary (used in mapping function)
-2. A shape file of the Pastures (used in mapping function)
-3. A csv file of the UTM locations of the precipitation gauges on the CPER (used as input array in interpolating precipitation across the CPER)
-4. A csv file with sample precipitation data (June 2020) collected everything 15 minutes from the 24 rain gauges (used as input array in interpolating precipitation across the CPER)
+1. CPERBody: A shape file of the CPER Boundary (used in mapping function)
+2. cper_pastures_2017_clip: A shape file of the Pastures (used in mapping function)
+3. ppt_locations: A csv file of the UTM locations of the precipitation gauges on the CPER (used as input array in interpolating precipitation across the CPER)
+4. flagged_ppt_sample: A csv file with sample precipitation data (June 2020) collected everything 15 minutes from the 24 rain gauges (used as input array in interpolating precipitation across the CPER)
 
 
  
