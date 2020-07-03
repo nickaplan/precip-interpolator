@@ -1,0 +1,8 @@
+# Generate interpolated map makefile
+
+data-dir = data/input
+data/output_maps/ppt21days.jpg : $(data-dir)/ppt_locations.csv \
+	$(data-dir)/flagged_ppt.csv \
+	$(data-dir)/CPERBody.shp \
+	$(data-dir)/cper_pastures_2017_clip.shp 
+	python src/interpolate.py data/input/ppt_locations.csv data/input/flagged_ppt.csv data/input/CPERBody.shp data/input/cper_pastures_2017_clip.shp

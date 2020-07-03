@@ -9,48 +9,47 @@ This repository is for development of code to interpolate and map precipitation 
 
 ***Localized nature of rainfall on semi-arid rangelands, by Sean Hauser***
 ***
+The interpolate.py script and GNU Make Makefile are part of an automated workflow of precipitation data from field to stakeholder.  Data from the sensors are delivered to a USDA server via telecom, which runs with a task scheduler on the server.  The script in this repository is a tool that can be used in making management of rangelands more precise, and will serve to produce a visualization of evidence to support science-based decisions to help achieve objectives for agricultural production and conservation in rangelands with highly variable precipitation regimes.  
 
-Interpolation of the CPER hydromet network precipitation data with various statistical methods will result in a script that our scientists will be able to use as a programming module to help answer reseach questions in other locations, in addition to making more precise rangeland management decision on the CPER.  
+### Specific Python Packages Required for the Workflow are listed and included in the Earth Analytics Python Environment (https://github.com/earthlab/earth-analytics-python-env)
 
-In addition, we know soil moisture is a master variable that drives plant production and other ecological processes that influence plant communities in semi-arid rangelands.  We also know that interpolation of soil moisture data is more complicated, because of the complexities of landscape position and soil type, so within this repository we will also develop scripts to produce a series of graphics for visualizing soil moisture.  These will be presented to scientists and stakeholders workng on the CPER for feedback.
-
-#### The scripts in this repository will produce tools that can be used in making management of rangelands more precise, and will serve to produce a visualization of evidence to support science-based decisions to help achieve objectives for agricultural production and conservation in rangelands with highly variable precipitation regimes.  
-
-### Python Packages Required for the Workflow:
-
- * glob 
- * os
- * NumPy
- * Pandas
- * Geopandas
- * Matplotlib
- * Rasterio
- * SciPy
- * Datetime
+import os
+import sys
+import math
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+from matplotlib import colors
+from scipy.spatial import cKDTree
+from datetime import datetime
+import earthpy as et
+import earthpy.plot as ep
  
- ### Required conda environment installations:
  
- * See yml file, which I will upload
+ ### Sample Jupyter Notebooks in the src folder:
  
- ### Jupyter Notebooks in the src folder:
- 
- 1. CARM_FinalProject_NicKaplan_1.ipynb contains code to georefernce precipitaton gauges installed as a network at CPER and interpolate precipitation amounts every two weeks across the CPER site.  This specifically used 2019 data as a proof of concept.
+ 1. CARM_FinalProject_NicKaplan_1.ipynb contains sample code blocks and a table of contents to give the user more control over the initial workflow upon which the interpolate.py python script was compiled to run automatically with the Gnu Make utility using the Makefile_3.txt. 
  
  
  ### Data Sources:
 
-Data for this repository is generated from the USDA ARS CARM PROJECT (http://www.ars.usda.gov/Research/docs.htm?docid=25733) and are available from the CPER; please contact <a href="mailto:Nicole.Kaplan@usda.gov">Nicole.Kaplan@usda.gov</a>
+Data for this repository is generated from the USDA ARS CARM PROJECT (http://www.ars.usda.gov/Research/docs.htm?docid=25733). Sample input data are provided in the input folder to run the notebook.  Information is available from the CPER; please contact <a href="mailto:Nicole.Kaplan@usda.gov">Nicole.Kaplan@usda.gov</a>
+
+Data required to run the example notebook includes:
+
+1. A shape file of the CPER Boundary (used in mapping function)
+2. A shape file of the Pastures (used in mapping function)
+3. A csv file of the UTM locations of the precipitation gauges on the CPER (used as input array in interpolating precipitation across the CPER)
+4. A csv file with sample precipitation data (June 2020) collected everything 15 minutes from the 24 rain gauges (used as input array in interpolating precipitation across the CPER)
+
+
  
- ### Run workflow:
+ ### Run workflow with interpolate.py:
  
 1. Clone this repository: https://github.com/nickaplan/precip-interpolator.git
 
-2. Create working directory for input data and output files for plots and maps of interpolated precipitation data and soil moisture graphics
+2. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile_3.txt which contains the data (and the paths to the data) used to run the script.  The interpolate.py script specifies the working directory.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile_3.txt*
 
-3. For now, CPER must run R script locally for QC of all sensor data to generate input csv files (available upon request, for now) for interpolation scripts
-
-4. Run script to georeference and interpolate precipitation data, and create graphics of soil moisture
-
-
- 
- 
+3. Open jpeg file of interpolated precipitation map.
