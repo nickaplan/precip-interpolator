@@ -11,9 +11,9 @@ This repository is for development of code to interpolate and map precipitation 
 ***
 The interpolate.py script and GNU Make Makefile are part of an automated workflow of precipitation data from field to stakeholder.  Data from the sensors are delivered to a USDA server via telecom, which runs with a task scheduler on the server.  The script in this repository is a tool that can be used in making management of rangelands more precise, and will serve to produce a visualization of evidence to support science-based decisions to help achieve objectives for agricultural production and conservation in rangelands with highly variable precipitation regimes.  
 
-### Specific Python Packages Required for the Workflow are listed and included in the Earth Analytics Python Environment (https://github.com/earthlab/earth-analytics-python-env)
+### Specific Python Packages Required for the Workflow are listed and included in the Earth Analytics Python Environment (https://www.earthdatascience.org/workshops/setup-earth-analytics-python/)
 
-Specifically, I used this list of packages:
+Specifically, from this environment I used this list of packages:
 import os
 import sys
 import math
@@ -31,7 +31,7 @@ import earthpy.plot as ep
  
  ### Sample Jupyter Notebooks in the src folder:
  
- 1. precip-interpolator-example.ipynb contains sample code blocks and a table of contents to give the user more control over the initial workflow upon which the interpolate.py python script was compiled to run automatically with the Gnu Make utility using the Makefile_3.txt. 
+ 1. precip-interpolator-example.ipynb contains sample code blocks and a table of contents to give the user more control over the initial workflow upon which the interpolate.py python script was compiled to run automatically with the Gnu Make utility using the Makefile.txt, which 
  
  
  ### Data Sources:
@@ -51,6 +51,8 @@ Data required to run the example notebook includes:
  
 1. Clone this repository: https://github.com/nickaplan/precip-interpolator.git
 
-2. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile_3.txt which contains the data (and the paths to the data) used to run the script.  IMPORTANT NOTE: The interpolate.py script specifies the working directory to the data.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile_3.txt*
+2. Create an output path for your maps, for example, the code uses: output_path = os.path.join(et.io.HOME, 'ea_python_spatial', 'Final_Project', 'precip-interpolator', "data", "output_maps")
 
-3. Open jpeg file of interpolated precipitation map.
+3. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile_3.txt which contains the data (and the paths to the data) used to run the script.  IMPORTANT NOTE: The interpolate.py script specifies the working directory to the data.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile.txt*
+
+4. Open jpeg file of interpolated precipitation map.
