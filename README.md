@@ -53,6 +53,6 @@ Data required to run the example notebook includes:
 
 2. Create an output path for your maps, for example, the code uses: output_path = os.path.join(et.io.HOME, 'ea_python_spatial', 'Final_Project', 'precip-interpolator', "data", "output_maps")
 
-3. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile_3.txt which contains the data (and the paths to the data) used to run the script.  IMPORTANT NOTE: The interpolate.py script specifies the working directory to the data.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile.txt*
+3. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile.txt which contains the data (and the paths to the data) used to run the script.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile.txt*
 
-4. Open jpeg file of interpolated precipitation map.
+4. Open jpeg file of interpolated precipitation map in the output_maps directory.
