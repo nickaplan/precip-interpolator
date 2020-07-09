@@ -13,6 +13,7 @@ The interpolate.py script and GNU Make Makefile are part of an automated workflo
 
 ### Specific Python Packages Required for the Workflow are listed and included in the Earth Analytics Python Environment (https://github.com/earthlab/earth-analytics-python-env)
 
+Specifically, I used this list of packages:
 import os
 import sys
 import math
@@ -30,7 +31,7 @@ import earthpy.plot as ep
  
  ### Sample Jupyter Notebooks in the src folder:
  
- 1. CARM_FinalProject_NicKaplan_1.ipynb contains sample code blocks and a table of contents to give the user more control over the initial workflow upon which the interpolate.py python script was compiled to run automatically with the Gnu Make utility using the Makefile_3.txt. 
+ 1. precip-interpolator-example.ipynb contains sample code blocks and a table of contents to give the user more control over the initial workflow upon which the interpolate.py python script was compiled to run automatically with the Gnu Make utility using the Makefile_3.txt. 
  
  
  ### Data Sources:
@@ -50,6 +51,6 @@ Data required to run the example notebook includes:
  
 1. Clone this repository: https://github.com/nickaplan/precip-interpolator.git
 
-2. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile_3.txt which contains the data (and the paths to the data) used to run the script.  The interpolate.py script specifies the working directory.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile_3.txt*
+2. The python script is comppiled by the GNU Make Utility (https://swcarpentry.github.io/make-novice/).  GNU MAke requires a Makefile_3.txt which contains the data (and the paths to the data) used to run the script.  IMPORTANT NOTE: The interpolate.py script specifies the working directory to the data.  The Makefile should be placed at the root of the repository, and the script and data may be subdirectories. At the command prompt, navigate to the git repository and type: *python -f Makefile_3.txt*
 
 3. Open jpeg file of interpolated precipitation map.
